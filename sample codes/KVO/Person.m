@@ -33,7 +33,6 @@ static void *Balance = (void *)&Balance;
 }
 
 
-
 - (void)registerAsObserver {
     [self.bankAccount addObserver:self
                    forKeyPath:@"balance"
