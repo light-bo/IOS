@@ -13,11 +13,11 @@
 
 + (BNRItemStore*)sharedStore {
     static BNRItemStore* store = nil;
-    
-    if(!store) {
-        store = [[super allocWithZone:nil] init];
-    }
-    
+	@synchronized(self) { //线程同步
+		if(!store) {
+			store = [[super allocWithZone:nil] init];
+		}
+	} 
     return store;
 }
 

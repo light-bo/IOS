@@ -24,6 +24,6 @@ dispatch_group_async(group, queue, ^{
 });
 
 dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-	NSLog(@"all tasks is completed!");
+	NSLog(@"all tasks is completed!");//update GUI
 });
 

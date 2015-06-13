@@ -12,21 +12,6 @@
 
 @implementation LightUtilities
 
-+ (void)setCollectionViewCellShadowBound:(UICollectionViewCell*)cell {
-    cell.layer.masksToBounds = NO;
-    cell.layer.contentsScale = [UIScreen mainScreen].scale;
-    cell.layer.shadowOpacity = 0.75f;
-    cell.layer.shadowRadius = 4.0f;
-    cell.layer.shadowOffset = CGSizeMake(0,0);
-    cell.layer.shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds].CGPath;
-    
-    //设置缓存
-    cell.layer.shouldRasterize = YES;
-    
-    //设置抗锯齿边缘
-    cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
-}
-
 
 + (BOOL)isToday:(NSDate*)date {
     NSDate *today = [NSDate date];

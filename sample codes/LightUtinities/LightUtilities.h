@@ -15,9 +15,6 @@
 }
 
 
-//设置 collection cell 灰色边缘
-+ (void)setCollectionViewCellShadowBound:(UICollectionViewCell*)cell;
-
 //判断日期是不是今天
 + (BOOL)isToday:(NSDate*)date;
 
