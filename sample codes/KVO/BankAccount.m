@@ -29,7 +29,7 @@
     NSLog(@"data changed!");
     
     float f = arc4random() % 100;
-    self.balace = f;
+    self.balance = f;
 }
 
 
