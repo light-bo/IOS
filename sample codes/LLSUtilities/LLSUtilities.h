@@ -1,8 +1,8 @@
 //
-//  LightUtilities.h
+//  LLSUtilities.h
 //  Statistics
 //
-//  Created by gzyiniu on 15-4-9.
+//  Created by light_bo on 15-4-9.
 //  Copyright (c) 2015年 gzyiniu. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class UICollectionViewCell;
 
-@interface LightUtilities : NSObject {
+@interface LLSUtilities : NSObject {
     
 }
 

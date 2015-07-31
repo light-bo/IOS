@@ -1,16 +1,16 @@
 //
-//  LightUtilities.m
+//  LLSUtilities.m
 //  Statistics
 //
-//  Created by gzyiniu on 15-4-9.
+//  Created by light_bo on 15-4-9.
 //  Copyright (c) 2015年 gzyiniu. All rights reserved.
 //
 
-#import "LightUtilities.h"
+#import "LLSUtilities.h"
 #import <UIKit/UIKit.h>
 
 
-@implementation LightUtilities
+@implementation LLSUtilities
 
 
 + (BOOL)isToday:(NSDate*)date {
