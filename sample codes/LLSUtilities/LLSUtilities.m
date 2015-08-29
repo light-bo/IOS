@@ -48,4 +48,20 @@
 }
 
 
++ (UILabel *)createLabelWithFrame:(CGRect)frame 
+                  backgroundColor:(UIColor *)color 
+				             text:(NSString *)text 
+							 font:(CGFloat)font 
+						   textAg:(NSTextAlignment)alignment     
+						textColor:(NSInteger)hexValue {
+	UILabel *label = [[UILabel alloc] initWithFrame:frame];
+	label.backgroundColor = color;
+	label.text = text;
+	label.font = [UIFont systemFontOfSize:font];
+	label.textAlignment = alignment;
+	label.textColor = UIColorFromRGB(hexValue);
+
+	return label;
+}
+
 @end

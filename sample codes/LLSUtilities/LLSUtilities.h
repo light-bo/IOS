@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class UICollectionViewCell;
 
 @interface LLSUtilities : NSObject {
     
@@ -16,13 +15,21 @@
 
 
 //判断日期是不是今天
-+ (BOOL)isToday:(NSDate*)date;
++ (BOOL)isToday:(NSDate *)date;
 
 //将 NSDate 转换为“XXXX年XX月XX日”的格式
-+ (NSString*)NSDateToString:(NSDate*)newDate;
++ (NSString *)NSDateToString:(NSDate *)newDate;
 
 //将 NSDate 转换为“XXXX－XX－XX” 的格式
-+ (NSString*)NSdateToInterfaceString:(NSDate*)date;
++ (NSString *)NSdateToInterfaceString:(NSDate *)date;
 
+
+//label
++ (UILabel *)createLabelWithFrame:(CGRect)frame 
+                  backgroundColor:(UIColor *)color 
+				             text:(NSString *)text 
+							 font:(CGFloat)font 
+						   textAg:(NSTextAlignment)alignment     
+						textColor:(NSInteger)hexValue;
 
 @end
