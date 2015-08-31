@@ -28,6 +28,14 @@
                                         action:(SEL)action;
 
 
+//创建圆形悬浮按钮
+- (void)createCircularSuspendButtonWithFrame:(CGRect)frame
+                            withColor:(UIColor *)color
+                            withTitle:(NSString *)title
+                           withTarget:(id)target
+                           withAction:(SEL)selector;
+//取消悬浮按钮
+- (void)resignCircularSuspendBtn;
 
 
 

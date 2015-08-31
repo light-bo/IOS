@@ -20,6 +20,12 @@ static const int kNavigationBarHeight = 44;
 
 @interface LLSBaseViewController ()
 
+//圆形悬浮按钮
+@property (nonatomic, strong) UIWindow *window; //不能声明为局部变量，否则显示不出来，因为函数运行完即释放
+@property (nonatomic, strong) UIButton *suspendBtn;
+
+
+
 @end
 
 @implementation LLSBaseViewController
@@ -79,6 +85,33 @@ static const int kNavigationBarHeight = 44;
     
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+}
+
+#pragma mark --创建悬浮按钮
+- (void)createCircularSuspendButtonWithFrame:(CGRect)frame
+                            withColor:(UIColor *)color
+                            withTitle:(NSString *)title
+                           withTarget:(id)target
+                           withAction:(SEL)selector {
+    self.window = [[UIWindow alloc] initWithFrame:frame];
+    self.window.windowLevel= UIWindowLevelNormal + 1;
+    self.window.backgroundColor = color;
+    self.window.layer.cornerRadius = frame.size.width/2;
+    self.window.layer.masksToBounds = YES;
+    
+    self.suspendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.suspendBtn setTitle:title forState:UIControlStateNormal];
+    self.suspendBtn.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    [self.suspendBtn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.window addSubview:_suspendBtn];
+    [self.window makeKeyAndVisible];//加载到屏幕并显示出来
+}
+
+- (void)resignCircularSuspendBtn {
+    [self.window setHidden:YES];
+    self.window = nil;
+    [self.view.window makeKeyAndVisible];//刷新界面
 }
 
 
