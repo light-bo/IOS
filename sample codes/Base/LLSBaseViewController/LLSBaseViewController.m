@@ -115,4 +115,41 @@ static const int kNavigationBarHeight = 44;
 }
 
 
+#pragma mark --活动指示符
+- (void)activityViewStartAnimating {
+    _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _activityIndicatorView.hidesWhenStopped = YES;
+    
+    [self.view addSubview:_activityIndicatorView];
+    
+    [_activityIndicatorView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSMutableArray *constraints = [NSMutableArray array];
+    //水平居中
+    [constraints addObjectsFromArray:[NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"|-[_activityIndicatorView]-|"
+                                      options:NSLayoutFormatAlignAllCenterX
+                                      metrics:nil
+                                      views:NSDictionaryOfVariableBindings(_activityIndicatorView)]];
+    
+    //垂直居中
+    [constraints addObjectsFromArray:[NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"V:|-[_activityIndicatorView]-|"
+                                      options:NSLayoutFormatAlignAllCenterY
+                                      metrics:nil
+                                      views:NSDictionaryOfVariableBindings(_activityIndicatorView)]];
+    
+    [self.view addConstraints:constraints];
+    
+    [_activityIndicatorView startAnimating];
+}
+
+
+- (void)activityViewStopAnimating {
+    [_activityIndicatorView stopAnimating];
+    [_activityIndicatorView removeFromSuperview];
+}
+
+
+
 @end

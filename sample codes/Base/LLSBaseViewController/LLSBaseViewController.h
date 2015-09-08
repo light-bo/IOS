@@ -37,6 +37,9 @@
 //取消悬浮按钮
 - (void)resignCircularSuspendBtn;
 
+//活动指示符
+- (void)activityViewStartAnimating;
+- (void)activityViewStopAnimating;
 
 
 @end
