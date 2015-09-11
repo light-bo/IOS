@@ -32,4 +32,7 @@
 						   textAg:(NSTextAlignment)alignment     
 						textColor:(NSInteger)hexValue;
 
+//获取十六进制颜色值
++ (UIColor *)colorWithHex:(long)hexColor alpha:(float)opacity;
+
 @end
