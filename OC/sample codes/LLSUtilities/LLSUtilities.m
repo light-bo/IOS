@@ -71,4 +71,51 @@
 	return [UIColor colorWithRed:red green:green blue:blue alpha:opacity];
 }
 
++ (NSString *)formatTimeWithTimestamp:(NSString *)timestamp {
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:@"yyyy MM dd HH:mm:ss"];
+	[dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"CN"]];
+	NSDate *dates = [NSDate dateWithTimeIntervalSince1970:[timestamp floatValue]/1000];
+
+	NSTimeInterval late = [dates timeIntervalSince1970] * 1;
+
+	NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+	NSTimeInterval now = [dat timeIntervalSince1970] * 1;
+	NSString *timeString = @"";
+
+	NSTimeInterval timeInterval = now - late;
+
+	if (timeInterval/3600 < 1) {
+		timeString = [NSString stringWithFormat:@"%f", timeInterval/60];
+		timeString = [timeString substringToIndex:timeString.length-7];
+		timeString=[NSString stringWithFormat:@"%@分钟前", timeString];
+	} else if (timeInterval/3600>1 && timeInterval/86400<1) {
+		NSTimeInterval cha = now - late;
+		int hours = ((int)cha) % (3600 * 24) / 3600;
+		timeString = [NSString stringWithFormat:@"%d小时前",hours];
+	} else if (timeInterval/86400>1) {
+		NSDateFormatter *dateformatter=[[NSDateFormatter alloc] init];
+		[dateformatter setDateFormat:@"YY-MM-dd"];
+		timeString = [NSString stringWithFormat:@"%@",[dateformatter stringFromDate:dates]];
+	}
+
+	return timeString;
+}
+
+//根据字符串的内容计算 label 的自适应高度
++ (CGFloat)calculateLabelContentHeight:(NSString *)content
+                          withFontSize:(CGFloat)fontSize
+                        withLabelWidth:(CGFloat)labelWidth {
+	//ios 7 later
+	NSDictionary *attrs = @{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]};
+
+	CGSize labelSize = [content boundingRectWithSize:CGSizeMake(labelWidth, 1000)
+		                                     options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
+		                                  attributes:attrs context:nil].size;
+
+	return labelSize.height;
+}
+
+
+
 @end

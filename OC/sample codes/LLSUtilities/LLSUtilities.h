@@ -35,4 +35,12 @@
 //获取十六进制颜色值
 + (UIColor *)colorWithHex:(long)hexColor alpha:(float)opacity;
 
+//将时间戳转换为可读时间
++ (NSString *)formatTimeWithTimestamp:(NSString *)timestamp;
+
+//根据字符串的内容计算 label 的自适应高度
++ (CGFloat)calculateLabelContentHeight:(NSString *)content
+                          withFontSize:(CGFloat)fontSize
+					    withLabelWidth:(CGFloat)labelWidth;
+
 @end
