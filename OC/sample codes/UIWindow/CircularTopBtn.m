@@ -33,7 +33,7 @@
     self = [super initWithFrame:frame];
     
     if(self) {
-        self.windowLevel= UIWindowLevelNormal + 1;
+        self.windowLevel= UIWindowLevelNormal + 1;//窗口层级
         self.backgroundColor = color;
         self.layer.cornerRadius = frame.size.width/2;
         self.layer.masksToBounds = YES;

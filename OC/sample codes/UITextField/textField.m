@@ -14,7 +14,7 @@
                                      self.view.frame.size.width,
                                      self.view.frame.size.height);
         
-        [UIView commitAnimations];
+    [UIView commitAnimations];
 }
 
 
