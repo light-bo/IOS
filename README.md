@@ -1,1 +1,1 @@
-collect some IOS good codes!
+collect some iOS good codes!
