@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Afghanistan +93</string>
+	<string>Albania +355</string>
+	<string>Algeria +213</string>
+	<string>American Samoa +1</string>
+	<string>Andorra +376</string>
+	<string>Angola +244</string>
+	<string>Anguilla +1</string>
+	<string>Antigua &amp; Barbuda +1</string>
+	<string>Argentina +54</string>
+	<string>Armenia +374</string>
+	<string>Aruba +297</string>
+	<string>Australia +61</string>
+	<string>Austria +43</string>
+	<string>Azerbaijan +994</string>
+	<string>Bahamas +1</string>
+	<string>Bahrain +973</string>
+	<string>Bangladesh +880</string>
+	<string>Barbados +1</string>
+	<string>Belarus +375</string>
+	<string>Belgium +32</string>
+	<string>Belize +501</string>
+	<string>Benin +229</string>
+	<string>Bermuda +1</string>
+	<string>Bhutan +975</string>
+	<string>Bolivia +591</string>
+	<string>Bosnia &amp; Herzegovina +387</string>
+	<string>Botswana +267</string>
+	<string>Brazil +55</string>
+	<string>British Virgin Islands +1</string>
+	<string>Brunei Darussalam +673</string>
+	<string>Bulgaria +359</string>
+	<string>Burkina Faso +226</string>
+	<string>Burundi +257</string>
+	<string>Cambodia +855</string>
+	<string>Cameroon +237</string>
+	<string>Canada +1</string>
+	<string>Cape Verde +238</string>
+	<string>Cayman Islands +345</string>
+	<string>Central African Republic +236</string>
+	<string>Chad +235</string>
+	<string>Chile +56</string>
+	<string>China +86</string>
+	<string>Colombia +57</string>
+	<string>Comoros +269</string>
+	<string>Congo +243</string>
+	<string>Cook Islands +682</string>
+	<string>Costa Rica +506</string>
+	<string>Cote d&apos;Ivoire +225</string>
+	<string>Croatia +385</string>
+	<string>Cuba +53</string>
+	<string>Curacao +599</string>
+	<string>Cyprus +537</string>
+	<string>Czech Republic +420</string>
+	<string>Congo(DRC) +1</string>
+	<string>Denmark +45</string>
+	<string>Djibouti +253</string>
+	<string>Dominica +1</string>
+	<string>Dominican Republic +1</string>
+	<string>Ecuador +593</string>
+	<string>Egypt +20</string>
+	<string>El Salvador +503</string>
+	<string>Equatorial Guinea +240</string>
+	<string>Eritrea +291</string>
+	<string>Estonia +372</string>
+	<string>Ethiopia +251</string>
+	<string>Falkland Islands +500</string>
+	<string>Faroe Islands +298</string>
+	<string>Fiji +679</string>
+	<string>Finland +358</string>
+	<string>France +33</string>
+	<string>French Guiana +594</string>
+	<string>French Polynesia +689</string>
+	<string>Gabon +241</string>
+	<string>Gambia +220</string>
+	<string>Georgia +995</string>
+	<string>Germany +49</string>
+	<string>Ghana +233</string>
+	<string>Gibraltar +350</string>
+	<string>Greece +30</string>
+	<string>Greenland +299</string>
+	<string>Grenada +1</string>
+	<string>Guadeloupe +590</string>
+	<string>Guam +1</string>
+	<string>Guatemala +502</string>
+	<string>Guinea +224</string>
+	<string>Guinea-Bissau +245</string>
+	<string>Guyana +592</string>
+	<string>Haiti +509</string>
+	<string>Honduras +504</string>
+	<string>Hong Kong +852</string>
+	<string>Hungary +36</string>
+	<string>Iceland +354</string>
+	<string>India +91</string>
+	<string>Indonesia +62</string>
+	<string>Iran +98</string>
+	<string>Iraq +964</string>
+	<string>Ireland +353</string>
+	<string>Israel +972</string>
+	<string>Italy +39</string>
+	<string>Jamaica +1</string>
+	<string>Japan +81</string>
+	<string>Jordan +962</string>
+	<string>Kazakhstan +77</string>
+	<string>Kenya +254</string>
+	<string>Kiribati +686</string>
+	<string>Kuwait +965</string>
+	<string>Kyrgyzstan +996</string>
+	<string>Lao +856</string>
+	<string>Latvia +371</string>
+	<string>Lebanon +961</string>
+	<string>Lesotho +266</string>
+	<string>Liberia +231</string>
+	<string>Libya +218</string>
+	<string>Liechtenstein +423</string>
+	<string>Lithuania +370</string>
+	<string>Luxembourg +352</string>
+	<string>Macao +853</string>
+	<string>Macedonia +389</string>
+	<string>Madagascar +261</string>
+	<string>Malawi +265</string>
+	<string>Malaysia +60</string>
+	<string>Maldives +960</string>
+	<string>Mali +223</string>
+	<string>Malta +356</string>
+	<string>Marshall Islands +692</string>
+	<string>Martinique +596</string>
+	<string>Mauritania +222</string>
+	<string>Mauritius +230</string>
+	<string>Mayotte +262</string>
+	<string>Mexico +52</string>
+	<string>Micronesia +691</string>
+	<string>Moldova +373</string>
+	<string>Monaco +377</string>
+	<string>Mongolia +976</string>
+	<string>Montenegro +382</string>
+	<string>Montserrat +1</string>
+	<string>Morocco +212</string>
+	<string>Mozambique +258</string>
+	<string>Myanmar +95</string>
+	<string>Namibia +264</string>
+	<string>Nauru +674</string>
+	<string>Nepal +977</string>
+	<string>Netherlands +31</string>
+	<string>New Caledonia +687</string>
+	<string>New Zealand +64</string>
+	<string>Nicaragua +505</string>
+	<string>Niger +227</string>
+	<string>Nigeria +234</string>
+	<string>Niue +683</string>
+	<string>Norfolk Island +672</string>
+	<string>North Korea +850</string>
+	<string>Northern Mariana Islands +1</string>
+	<string>Norway +47</string>
+	<string>Oman +968</string>
+	<string>Pakistan +92</string>
+	<string>Palau +680</string>
+	<string>Palestine +970</string>
+	<string>Panama +507</string>
+	<string>Papua New Guinea +675</string>
+	<string>Paraguay +595</string>
+	<string>Peru +51</string>
+	<string>Philippines +63</string>
+	<string>Poland +48</string>
+	<string>Portugal +351</string>
+	<string>Puerto Rico +1</string>
+	<string>Qatar +974</string>
+	<string>Reunion +262</string>
+	<string>Romania +40</string>
+	<string>Russia +7</string>
+	<string>Rwanda +250</string>
+	<string>St.Pierre &amp; Miquelon +508</string>
+	<string>St.Vincent &amp; Grenadines +1</string>
+	<string>Samoa +685</string>
+	<string>San Marino +378</string>
+	<string>Sao Tome &amp; Principe +239</string>
+	<string>Saudi Arabia +966</string>
+	<string>Senegal +221</string>
+	<string>Serbia +381</string>
+	<string>Seychelles +248</string>
+	<string>Sierra Leone +232</string>
+	<string>Singapore +65</string>
+	<string>Sint Maarten +1</string>
+	<string>Slovakia +421</string>
+	<string>Slovenia +386</string>
+	<string>Solomon Islands +677</string>
+	<string>Somalia +252</string>
+	<string>South Africa +27</string>
+	<string>South Korea +82</string>
+	<string>South Sudan +211</string>
+	<string>Spain +34</string>
+	<string>Sri Lanka +94</string>
+	<string>Sudan +249</string>
+	<string>Suriname +597</string>
+	<string>Swaziland +268</string>
+	<string>Sweden +46</string>
+	<string>Switzerland +41</string>
+	<string>Syria +963</string>
+	<string>Taiwan +886</string>
+	<string>Tajikistan +992</string>
+	<string>Tanzania +255</string>
+	<string>Thailand +66</string>
+	<string>Togo +228</string>
+	<string>Tokelau +690</string>
+	<string>Tonga +676</string>
+	<string>Trinidad &amp; Tobago +1</string>
+	<string>Tunisia +216</string>
+	<string>Turkey +90</string>
+	<string>Turkmenistan +993</string>
+	<string>Turks &amp; Caicos Islands +1</string>
+	<string>Tuvalu +688</string>
+	<string>U.S. Virgin Islands +1</string>
+	<string>Uganda +256</string>
+	<string>Ukraine +380</string>
+	<string>United Arab Emirates +971</string>
+	<string>United Kingdom +44</string>
+	<string>United States +1</string>
+	<string>Uruguay +598</string>
+	<string>Uzbekistan +998</string>
+	<string>Vanuatu +678</string>
+	<string>Vatican City State +379</string>
+	<string>Venezuela +58</string>
+	<string>Vietnam +84</string>
+	<string>Wallis &amp; Futuna +681</string>
+	<string>Yemen +967</string>
+	<string>Zambia +260</string>
+	<string>Zimbabwe +263</string>
+</array>
+</plist>

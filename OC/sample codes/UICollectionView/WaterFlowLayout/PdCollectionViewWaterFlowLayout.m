@@ -16,7 +16,6 @@
 @end
 
 
-
 @implementation PdCollectionViewWaterFlowLayout
 
 - (instancetype)init {
@@ -24,6 +23,11 @@
     if (self) {
         _maxYDict = [NSMutableDictionary new];
         _attrsArray = [NSMutableArray new];
+        _collectionViewHeaderHeight = 0;
+        
+        //底部留出呼吸空间
+        self.sectionInset = UIEdgeInsetsMake(0, 0, 100, 0);
+//        _collectionViewFooterHeight = 0;
     }
     
     return self;
@@ -32,18 +36,6 @@
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
-}
-
-
-// contentsize 的高度为最长的那一列的高度
-- (CGSize)collectionViewContentSize {
-    __block NSString *maxColumn = @"0";
-    [self.maxYDict enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
-        if ([maxY floatValue] > [self.maxYDict[maxColumn] floatValue]) {
-            maxColumn = column;
-        }
-    }];
-    return CGSizeMake(0, [self.maxYDict[maxColumn] floatValue] + self.sectionInset.bottom);
 }
 
 //每次布局之前的准备
@@ -58,11 +50,38 @@
     
     //计算所有cell的属性
     [self.attrsArray removeAllObjects];
+    
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
-    for (int i = 0; i<count; i++) {
+    
+    //头部视图
+    if (_collectionViewHeaderHeight > 0) {
+        UICollectionViewLayoutAttributes *layoutHeader = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathWithIndex:0]];
+        layoutHeader.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, _collectionViewHeaderHeight);
+        [self.attrsArray addObject:layoutHeader];
+    }
+    
+//    if (_collectionViewFooterHeight > 0) {
+//        UICollectionViewLayoutAttributes *layoutFooter = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter withIndexPath:[NSIndexPath indexPathWithIndex:count + 1]];
+//        layoutFooter.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, _collectionViewFooterHeight);
+//        [self.attrsArray addObject:layoutFooter];
+//    }
+
+    for (int i = 0; i < count; i++) {
         UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         [self.attrsArray addObject:attrs];
     }
+}
+
+// contentsize 的高度为最长的那一列的高度
+- (CGSize)collectionViewContentSize {
+    __block NSString *maxColumn = @"0";
+    [self.maxYDict enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
+        if ([maxY floatValue] > [self.maxYDict[maxColumn] floatValue]) {
+            maxColumn = column;
+        }
+    }];
+
+    return CGSizeMake(self.collectionView.frame.size.width, [self.maxYDict[maxColumn] floatValue] + self.sectionInset.bottom);
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect )rect {
@@ -81,12 +100,17 @@
     }];
     
     //计算尺寸
-    CGFloat width = (self.collectionView.frame.size.width - self.sectionInset.left - self.sectionInset.right - (self.columnsCount - 1) * self.columnMargin)/self.columnsCount;
-    CGFloat height = [self.delegate waterflowLayout:self heightForWidth:width atIndexPath:indexPath];;
+    CGFloat width = (self.collectionView.frame.size.width - self.sectionInset.left - self.sectionInset.right - (self.columnsCount - 1) * self.columnMargin) / self.columnsCount;
+    CGFloat height = [self.delegate waterflowLayout:self heightForWidth:width atIndexPath:indexPath];
     
     //计算位置
     CGFloat x = self.sectionInset.left + (width + self.columnMargin) * [minColumn intValue];
-    CGFloat y = [self.maxYDict[minColumn] floatValue] + self.rowMargin;
+    
+    float sectionHeaderOffset = 0;
+    if (_collectionViewHeaderHeight > 0) {
+        sectionHeaderOffset = (indexPath.row < _columnsCount? 1: 0) * _collectionViewHeaderHeight;
+    }
+    CGFloat y = [self.maxYDict[minColumn] floatValue] + self.rowMargin + sectionHeaderOffset;
     
     //更新这一列的最大Y值
     self.maxYDict[minColumn] = @(y + height);
@@ -96,5 +120,6 @@
     attrs.frame = CGRectMake(x, y, width, height);
     return attrs;
 }
+
 
 @end

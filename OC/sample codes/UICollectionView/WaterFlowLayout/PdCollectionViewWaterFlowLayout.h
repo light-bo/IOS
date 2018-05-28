@@ -34,12 +34,21 @@
  */
 @property (nonatomic, assign) float columnMargin;
 
-
-
 /**
  每一行的间距
  */
 @property (nonatomic, assign) float rowMargin;
+
+
+/**
+ header 的高度
+ */
+@property (nonatomic, assign) float collectionViewHeaderHeight;
+
+/**
+ footer 的高度
+ */
+//@property (nonatomic, assign) float collectionViewFooterHeight;
 
 
 @property (nonatomic, weak) id<PdCollectionViewWaterFlowLayoutDelegate> delegate;
