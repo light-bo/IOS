@@ -27,6 +27,13 @@
  
  [self presentViewController:popoverMenuVC animated:YES completion:nil];
 
+ NOTE:
+ //UIPopoverPresentationControllerDelegate 应该实现这个回调，才会有弹出框的效果
+ - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+ return UIModalPresentationNone;
+ }
+
+ 
  */
 
 @class PdPopoverMenuModel;
